@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#surveybox{
+    box-shadow: 5px 5px 5px grey;
+    background-image: linear-gradient(to top right, white, lightgrey);
+    margin: 25px auto 5px auto;
+    height: 360px;
+    width: 320px;
+    border: 2px solid black;
+    font-family: sans-serif; 
+}
+#messagebox{
+    margin-top: 40px;
+    box-shadow: 5px 5px 5px grey;
+    background-image: linear-gradient(to bottom right, white, lightgrey);
+    height: 100px;
+    width: 320px;
+    border: 2px solid black;
+    font-family: sans-serif; 
+}
+#resultsbox{
+    margin: 25px auto 5px auto;
+    box-shadow: 5px 5px 5px grey;
+    background-image: linear-gradient(to bottom right, white, lightblue );
+    height: 200px;
+    width: 320px;
+    border: 2px solid black;
+    font-family: sans-serif; 
+}
+#forms{
+    padding: 10px;
+    align-items: center;
+}
+p{
+    padding-left:10px;
+}
+textarea {
+    margin-left: 10px;
+    width: 300px;
+    height: 150px;
+  }
+#button{
+    margin-left: 10px;
+}
+h2{
+    margin:10px;
+}

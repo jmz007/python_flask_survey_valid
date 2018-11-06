@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dojo Survey Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+    
+</head>
+<body>
+    <div id="surveybox">
+        <form action='/formresults' method='post'>
+            <h2>Coding Dojo Survey</h2>
+            <p>Your Name:<input type='text' name='name'></p>
+            <div id="forms">
+                Dojo Location:
+                <select name="location">
+                    <option value="san jose">San Jose, Ca.</option>
+                    <option value="seattle">Seattle, Wa.</option>
+                    <option value="la">Los Angeles, Ca.</option>
+                    <option value="dallas">Dallas, Tx.</option>
+                    <option value="tc">Tyson's Corner, Va.</option>
+                    <option value="chicago">Chicago, Il.</option>
+                    <option value="tulsa">Tulsa, not-Ok.</option>
+                    <option value="berkeley">Berkeley, Ca.</option>
+                    <option value="boise">Boise, Id.</option>
+                    <option value="oc">Orange County, Ca.</option>
+                </select>
+            </div>
+            <div id="forms">
+                Favorite Language:
+                <select name="language">
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="cplusplus">C++</option>
+                    <option value="csharp">C#</option>
+                    <option value="php">PHP</option>
+                    <option value="perl">Perl</option>
+                    <option value="swift">Swift</option>
+                    <option value="r">R</option>
+                    <option value="rust">Rust</option>
+                </select>
+            </div>
+            <div>
+                <p>Comment (optional):</p>
+            </div>
+                <textarea name="comment"></textarea>
+            
+            <div id="button">
+                <input type='submit' value='Submit Survey'>
+            </div>
+            <div id="messagebox">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </form>
+    </div>
+</body>
+</html>
